@@ -7,7 +7,9 @@ index efb7926..b419a93 100644
  }
  
 +function dblog_modules_enabled($modules) {
-+  if (in_array('dblog', $modules) && (isset(!$_ENV['AH_NON_PRODUCTION']) OR !$_ENV['AH_NON_PRODUCTION'])) {
++  if (in_array('dblog', $modules) && !empty($_ENV['AH_SITE_ENVIRONMENT']) &&  $_ENV['AH_SITE_ENVIRONMENT'] == '01live') {
++    drupal_set_message(t('Syngenta does not allow the use of "Database logging" on production, please stream line
++       your logs from cloud.acquia.com.'), 'error');
 +    module_disable(array('dblog'));
 +    drupal_uninstall_modules(array('dblog'));
 +  }
