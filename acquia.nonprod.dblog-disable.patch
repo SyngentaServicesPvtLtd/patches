@@ -1,0 +1,18 @@
+diff --git a/docroot/modules/dblog/dblog.install b/docroot/modules/dblog/dblog.install
+index c2e4119..4d88e3f 100644
+--- a/docroot/modules/dblog/dblog.install
++++ b/docroot/modules/dblog/dblog.install
+@@ -163,6 +163,13 @@ function dblog_update_7003() {
+   }
+ }
+ 
++function dblog_modules_enabled($modules) {
++  if (in_array('dblog', $modules) && (isset(!$_ENV['AH_NON_PRODUCTION']) OR !$_ENV['AH_NON_PRODUCTION'])) {
++    module_disable(array('dblog'));
++    drupal_uninstall_modules(array('dblog'));
++  }
++}
++
+ /**
+  * @} End of "addtogroup updates-7.x-extra".
+  */
