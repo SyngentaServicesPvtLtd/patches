@@ -1,4 +1,4 @@
-diff --git a/modules/dblog/dblog.install b/docroot/modules/dblog/dblog.install
+diff --git a/modules/dblog/dblog.install b/modules/dblog/dblog.install
 index efb7926..b419a93 100644
 --- a/modules/dblog/dblog.install
 +++ b/modules/dblog/dblog.install
