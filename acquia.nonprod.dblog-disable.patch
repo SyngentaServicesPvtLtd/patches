@@ -1,5 +1,5 @@
 diff --git a/modules/dblog/dblog.install b/docroot/modules/dblog/dblog.install
-index c2e4119..4d88e3f 100644
+index efb7926..b419a93 100644
 --- a/modules/dblog/dblog.install
 +++ b/modules/dblog/dblog.install
 @@ -163,6 +163,13 @@ function dblog_update_7003() {
