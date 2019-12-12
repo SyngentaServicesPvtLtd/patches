@@ -1,9 +1,9 @@
-diff --git a/docroot/modules/dblog/dblog.install b/docroot/modules/dblog/dblog.install
-index c2e4119..2531bef 100644
---- a/docroot/modules/dblog/dblog.install
-+++ b/docroot/modules/dblog/dblog.install
-@@ -163,6 +163,15 @@ function dblog_update_7003() {
-   }
+diff --git a/modules/dblog/dblog.install b/modules/dblog/dblog.install
+index c2e4119..037a2f4 100644
+--- a/modules/dblog/dblog.install
++++ b/modules/dblog/dblog.install
+@@ -138,6 +138,16 @@ function dblog_update_7001() {
+   ));
  }
  
 +function dblog_modules_enabled($modules) {
@@ -14,6 +14,15 @@ index c2e4119..2531bef 100644
 +    drupal_uninstall_modules(array('dblog'));
 +  }
 +}
++
++
+ /**
+  * @} End of "addtogroup updates-6.x-to-7.x".
+  */
+@@ -163,6 +173,7 @@ function dblog_update_7003() {
+   }
+ }
+ 
 +
  /**
   * @} End of "addtogroup updates-7.x-extra".
