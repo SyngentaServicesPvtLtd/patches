@@ -1,7 +1,7 @@
-diff --git a/docroot/sites/all/themes/contrib/zen/template.php b/docroot/sites/all/themes/contrib/zen/template.php
+diff --git a/sites/all/themes/contrib/zen/template.php b/sites/all/themes/contrib/zen/template.php
 index c20549b..0efb96a 100644
---- a/docroot/sites/all/themes/contrib/zen/template.php
-+++ b/docroot/sites/all/themes/contrib/zen/template.php
+--- a/sites/all/themes/contrib/zen/template.php
++++ b/sites/all/themes/contrib/zen/template.php
 @@ -221,8 +221,13 @@ function zen_process_html_tag(&$variables) {
    $tag = &$variables['element'];
 
