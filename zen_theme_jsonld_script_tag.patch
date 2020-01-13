@@ -4,7 +4,7 @@ index c20549b..0efb96a 100644
 +++ b/sites/all/themes/contrib/zen/template.php
 @@ -221,8 +221,13 @@ function zen_process_html_tag(&$variables) {
    $tag = &$variables['element'];
-      
+  
    if ($tag['#tag'] == 'style' || $tag['#tag'] == 'script') {
 -    // Remove redundant type attribute and CDATA comments.
 -    unset($tag['#attributes']['type'], $tag['#value_prefix'], $tag['#value_suffix']);
@@ -15,6 +15,6 @@ index c20549b..0efb96a 100644
 +    if (isset($tag['#attributes']['type']) && $tag['#attributes']['type'] !== 'text/ng-template' && $tag['#attributes']['type'] !== 'application/ld+json') {
 +      unset($tag['#attributes']['type']);
 +    }
-
+ 
      // Remove media="all" but leave others unaffected.
      if (isset($tag['#attributes']['media']) && $tag['#attributes']['media'] === 'all') {
